@@ -1,0 +1,23 @@
+nums=[1,3,7,9,2]
+target = 11
+
+const twoSum = function(nums,target){
+    const numMap = {};
+    for(p=0 ; p < nums.length ; p++ ){
+        
+        const currentMapValue = numMap[nums[p]];
+
+        if(currentMapValue >= 0){
+            return [currentMapValue, p];
+        }
+        else {
+            const numberToFind = target - nums[p];
+            numMap[numberToFind] = p;
+        }
+
+
+    }
+    return null;
+}
+
+console.log(twoSum(nums,target))
