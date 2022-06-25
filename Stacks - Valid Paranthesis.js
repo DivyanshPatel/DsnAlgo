@@ -1,17 +1,21 @@
 const s = "{()[]}";
 
+
+
+const isValidParanthesis = function(s){
+
+
 const params = {
     "{":"}",
     "[":"]",
     "(":")"
 }
 
-
-const isValidParanthesis = function(s){
+const stack = [] ;
 
     if(s.length === 0 ) return true ;
 
-    const stack = [] ;
+  
 
     for(let i = 0 ; i < s.length ; i++ ){
         if (params[s[i]]){
