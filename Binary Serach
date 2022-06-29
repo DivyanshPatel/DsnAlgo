@@ -1,9 +1,9 @@
 const array = [1,2,3,4,5,6,7];
-const target = 5;
+const target = 7;
 
 const binarySearch = function(array,target){
 
-    const left = 0 , right = array.lenght -1;
+    let left = 0 , right = array.length -1;
 
     while(left<=right){
         const midPoint = Math.floor((left+right)/2);
@@ -11,12 +11,14 @@ const binarySearch = function(array,target){
         if(foundValue === target){
             return midPoint;
         } else if(foundValue<target){
-            left = mid +1;
+            left = midPoint +1;
         } else {
-            right = mid -1 ;
+            right = midPoint -1 ;
         }
     }
     return -1;
 
 
 }
+
+console.log(binarySearch(array, target));
