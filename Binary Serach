@@ -1,0 +1,22 @@
+const array = [1,2,3,4,5,6,7];
+const target = 5;
+
+const binarySearch = function(array,target){
+
+    const left = 0 , right = array.lenght -1;
+
+    while(left<=right){
+        const midPoint = Math.floor((left+right)/2);
+        const foundValue = array[midPoint];
+        if(foundValue === target){
+            return midPoint;
+        } else if(foundValue<target){
+            left = mid +1;
+        } else {
+            right = mid -1 ;
+        }
+    }
+    return -1;
+
+
+}
